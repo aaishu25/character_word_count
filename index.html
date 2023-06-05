@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Char-Word Count</title>
+		<link rel="stylesheet"href="c1.css">
+	<head>
+	<body>
+	<center>
+		<h1>Char-Word Count</h1>
+		<form>
+			<textarea placeholder="Enter your textt here" rows=5 cols=25 id="ta"></textarea>
+			</br></br>
+		</form>
+		<h1 id="msg"></h1>
+		<script>
+			let ta = document.getElementById("ta");
+			let msg = document.getElementById("msg");
+			
+			ta.addEventListener("input",function(){
+				let text = ta.value.trim();
+				let cc = text.split(" ").join("").length;
+				let wc = 0;
+				if(cc == 0)
+					wc = 0;
+				else
+					wc = text.split(" ").length;
+				let ans = "Character Count : "+cc+" "+"  Word Count : "+wc;
+				msg.innerHTML = ans;
+			});		
+		</script>
+	</center>
+	</body>
+</html>
